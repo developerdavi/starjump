@@ -1,0 +1,30 @@
+{
+  "main": "node_modules/expo/AppEntry.js",
+  "scripts": {
+    "start": "expo start",
+    "android": "expo start --android",
+    "ios": "expo start --ios",
+    "eject": "expo eject"
+  },
+  "dependencies": {
+    "expo": "^32.0.0",
+    "expokit": "^32.0.6",
+    "react": "16.5.0",
+    "react-native": "https://github.com/expo/react-native/archive/sdk-32.0.0.tar.gz",
+    "react-native-full-screen": "0.0.2",
+    "react-native-game-engine": "^0.10.1",
+    "react-native-keep-awake": "^4.0.0",
+    "react-native-linear-gradient": "^2.5.3",
+    "react-native-sound": "^0.10.12",
+    "react-native-ui-kitten": "^3.1.2"
+  },
+  "devDependencies": {
+    "babel-preset-expo": "^5.0.0"
+  },
+  "private": true,
+  "rnpm": {
+    "assets": [
+      "./assets/fonts/"
+    ]
+  }
+}

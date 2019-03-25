@@ -1,0 +1,40 @@
+{
+  "expo": {
+    "name": "Star Jump",
+    "slug": "starjump",
+    "privacy": "public",
+    "sdkVersion": "32.0.0",
+    "platforms": [
+      "ios",
+      "android"
+    ],
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "splash": {
+      "image": "./assets/splash.png",
+      "resizeMode": "cover",
+      "backgroundColor": "#191919"
+    },
+    "updates": {
+      "fallbackToCacheTimeout": 0
+    },
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "br.com.sesisenaibetim.starbots.starjump"
+    },
+    "isDetached": false,
+    "detach": {
+      "androidExpoViewUrl": "https://s3.amazonaws.com/exp-exponent-view-code/android-v2.10.5-sdk32.0.0-cfdf42e8-f9b5-4ddd-84fd-2f2aacffe2c1.tar.gz"
+    },
+    "scheme": "expf0cdd02b50834d9aaf5f79bdb9b67b9f",
+    "android": {
+      "package": "br.com.sesisenaibetim.starbots.starjump",
+      "publishBundlePath": "android/app/src/main/assets/shell-app.bundle",
+      "publishManifestPath": "android/app/src/main/assets/shell-app-manifest.json"
+    }
+  }
+}
