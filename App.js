@@ -465,7 +465,7 @@ export default class StarJump extends PureComponent {
                 <Text style={[{fontSize: 20, fontFamily: 'nasalization', opacity: 1}]}>Distância ({progress.toString()}/{max.toString()})</Text>
               </View>
               <View rkCardContent style={{alignItems: 'center'}}>
-                <Text style={{fontSize: 25, fontFamily: 'nasalization', opacity: 1}}>{(distance / nextDistance * 100).toFixed(2)}%</Text>
+                <Text style={{fontSize: 25, fontFamily: 'nasalization', opacity: 1}}>{(distance / nextDistance * 100) > 100 ? 100 + (distance / nextDistance * 100).toFixed(2) : (distance / nextDistance * 100).toFixed(2)}%</Text>
               </View>
               <View style={{width: '100%', alignItems: 'center', alignContent: 'center', justifyContent: 'center', marginTop: -40}}>
                 <Text style={{fontSize: 18, fontFamily: 'nasalization', opacity: 1}}>{distance.toString()} <Text style={{fontSize: 64}} > → </Text> {(nextDistance).toString()}</Text>
