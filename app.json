@@ -32,9 +32,7 @@
     },
     "scheme": "expf0cdd02b50834d9aaf5f79bdb9b67b9f",
     "android": {
-      "package": "br.com.sesisenaibetim.starbots.starjump",
-      "publishBundlePath": "android/app/src/main/assets/shell-app.bundle",
-      "publishManifestPath": "android/app/src/main/assets/shell-app-manifest.json"
+      "package": "br.com.devdavi.starjump"
     }
   }
 }
