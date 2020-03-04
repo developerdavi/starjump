@@ -1,6 +1,6 @@
-import Expo, { Accelerometer } from 'expo';
+import Expo from 'expo';
 import { Dimensions, Alert } from 'react-native';
-import React, { PureComponent } from 'react';
+import { Accelerometer } from 'expo-sensors';
 // import { GameLoop } from 'react-native-game-engine';
 
 var accelerometerData = {}

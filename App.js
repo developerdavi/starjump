@@ -15,7 +15,8 @@ import {
   NativeModules
 } from 'react-native';
 import { RkButton, RkTheme, RkCard } from 'react-native-ui-kitten';
-import { LinearGradient, KeepAwake } from 'expo';
+import { activateKeepAwake, deactivateKeepAwake } from 'expo-keep-awake'
+import { LinearGradient } from 'expo-linear-gradient'
 
 // React Native Game Engine
 import { GameEngine } from 'react-native-game-engine';
@@ -29,10 +30,14 @@ import { dPrizes, jPrizes } from './prizes.js';
 
 // Accelerometer
 import {
-  Font,
-  AppLoading, 
-  Asset
+  AppLoading,
 } from 'expo';
+
+import {
+  Asset
+} from 'expo-asset';
+
+import * as Font from 'expo-font'
 
 // RkTheme
 RkTheme.setType('RkButton', 'start', {
@@ -163,6 +168,7 @@ class PopUp extends PureComponent {
 export default class StarJump extends PureComponent {
   constructor() {
     super()
+    this._loadResourcesAsync()
   }
 
   static navigationOptions = {
@@ -174,7 +180,8 @@ export default class StarJump extends PureComponent {
     inGame: false
   }
   
-  _loadResourcesAsync = async () => {
+  _loadResourcesAsync = () => {
+
     return Promise.all([
       Asset.loadAsync([
         require('./assets/astronaut.png'),
@@ -187,8 +194,9 @@ export default class StarJump extends PureComponent {
         'thaleah': require('./assets/fonts/ThaleahFat.ttf'),
         'OpenDyslexicAlta': require('./assets/fonts/OpenDyslexicAlta-Bold.otf'),
         'Montserrat': require('./assets/fonts/Montserrat.ttf')
-      }),
-    ]);
+      })
+    ])
+      
   };
 
   _handleLoadingError = error => {
@@ -245,16 +253,16 @@ export default class StarJump extends PureComponent {
   componentDidMount() {
     BackHandler.addEventListener('hardwareBackPress', this.handleBackPress);
     // NativeModules.KCKeepAwake.activate();
-    KeepAwake.activate();
+    activateKeepAwake()
   }
 
   componentWillUnmount() {
     BackHandler.removeEventListener('hardwareBackPress', this.handleBackPress);
     // NativeModules.KCKeepAwake.deactivate();
-    KeepAwake.deactivate();
+    deactivateKeepAwake()
   }
 
-  componentWillMount = async () => {
+  UNSAFE_componentWillMount = async () => {
     let distance = await this.getDistance()
     let record = await this.getRecord()
     let jumps = await this.getJumps()

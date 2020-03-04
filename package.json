@@ -7,24 +7,26 @@
     "eject": "expo eject"
   },
   "dependencies": {
-    "expo": "^32.0.0",
-    "expokit": "^32.0.6",
-    "react": "16.5.0",
-    "react-native": "https://github.com/expo/react-native/archive/sdk-32.0.0.tar.gz",
+    "expo": "~36.0.0",
+    "expo-asset": "~8.0.0",
+    "expo-font": "^8.0.0",
+    "expo-keep-awake": "~8.0.0",
+    "expo-linear-gradient": "~8.0.0",
+    "expo-sensors": "~8.0.0",
+    "expokit": "36.0.1",
+    "react": "16.9.0",
+    "react-native": "https://github.com/expo/react-native/archive/sdk-36.0.0.tar.gz",
     "react-native-full-screen": "0.0.2",
     "react-native-game-engine": "^0.10.1",
     "react-native-keep-awake": "^4.0.0",
     "react-native-linear-gradient": "^2.5.3",
+    "react-native-sensors": "^5.3.3",
     "react-native-sound": "^0.10.12",
-    "react-native-ui-kitten": "^3.1.2"
+    "react-native-ui-kitten": "^3.1.2",
+    "scheduler": "^0.19.0"
   },
   "devDependencies": {
     "babel-preset-expo": "^5.0.0"
   },
-  "private": true,
-  "rnpm": {
-    "assets": [
-      "./assets/fonts/"
-    ]
-  }
+  "private": true
 }
