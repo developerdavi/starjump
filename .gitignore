@@ -2,3 +2,4 @@
 .expo-shared
 node_modules
 *.keystore
+yarn-error.log
