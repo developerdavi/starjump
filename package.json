@@ -1,4 +1,18 @@
 {
+  "name": "starjump",
+  "displayName": "Star Jump",
+  "author": {
+    "name": "Davi Rodrigues Coelho",
+    "email": "hello@devdavi.com.br",
+    "url": "https://devdavi.com.br"
+  },
+  "version": "1.0.0",
+  "description": "Star Jump is a game developed to improve Starbots team marketing in 2019 FTC",
+  "license": "MIT",
+  "repository": {
+    "url": "https://github.com/developerdavi/starjump",
+    "type": "public"
+  },
   "main": "node_modules/expo/AppEntry.js",
   "scripts": {
     "start": "expo start",
@@ -28,5 +42,5 @@
   "devDependencies": {
     "babel-preset-expo": "^5.0.0"
   },
-  "private": true
+  "private": false
 }
